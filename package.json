@@ -1,0 +1,23 @@
+{
+  "name": "daily-schawarma",
+  "version": "0.0.1",
+  "description": "Front end asset pipeline for resmio.com projects",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/resmio/daily-schawarma"
+  },
+  "keywords": [
+    "frontend",
+    "pipeline"
+  ],
+  "author": "Jose Menor",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/resmio/daily-schawarma/issues"
+  },
+  "homepage": "https://github.com/resmio/daily-schawarma"
+}
