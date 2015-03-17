@@ -3,7 +3,7 @@
   https://github.com/greypants/gulp-starter
 
   To add a new task, simply add a new task file that directory.
-  tasks/default.js specifies the default set of tasks to run
+  gulpfile.js/tasks/default.js specifies the default set of tasks to run
   when you run `gulp`.
 */
 
