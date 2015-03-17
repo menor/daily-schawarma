@@ -19,5 +19,10 @@
   "bugs": {
     "url": "https://github.com/resmio/daily-schawarma/issues"
   },
-  "homepage": "https://github.com/resmio/daily-schawarma"
+  "homepage": "https://github.com/resmio/daily-schawarma",
+  "devDependencies": {
+    "gulp": "^3.8.11",
+    "gulp-sass": "^1.3.3",
+    "require-dir": "^0.1.0"
+  }
 }
