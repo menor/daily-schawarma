@@ -8,6 +8,13 @@ module.exports = {
   sourceAssets: sourceAssets,
   publicAssets: publicAssets,
 
+  browserSync: {
+    server: {
+      baseDir: publicDirectory
+    },
+    files: ['pubilc/**/*.html']
+  },
+
   sass: {
     src: sourceAssets + "/styles/**/*.{sass,scss}",
     dest: publicAssets + "/styles",
