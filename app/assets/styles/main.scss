@@ -1,5 +1,9 @@
+@import "bourbon";
+@import "neat";
+
 $red: yellow;
 
 body {
+  @include span-columns(12);
   background: $red;
 }
