@@ -4,6 +4,9 @@
 $red: yellow;
 
 body {
-  @include span-columns(12);
-  background: $red;
+
+}
+
+h1 {
+  color: yellow;
 }

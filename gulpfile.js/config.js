@@ -12,7 +12,13 @@ module.exports = {
     server: {
       baseDir: publicDirectory
     },
-    files: ['pubilc/**/*.html']
+    files: ['public/**/*.html']
+  },
+
+  html: {
+    watch: sourceDirectory + '/views/**/*.html',
+    src: [sourceDirectory + '/views/**/*.html', '!**/{layouts,shared}/**'],
+    dest: publicDirectory,
   },
 
   sass: {
