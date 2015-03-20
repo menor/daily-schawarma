@@ -13,7 +13,8 @@ module.exports = {
     server: {
       baseDir: publicDirectory
     },
-    files: ['public/**/*.html']
+    files: ['public/**/*.html'],
+    browser: "google chrome canary"
   },
 
   html: {
