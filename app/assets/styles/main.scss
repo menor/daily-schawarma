@@ -1,9 +1,12 @@
 @import "bourbon";
 @import "neat";
 
-$red: yellow;
+$red: black;
 
 body {
-  @include span-columns(12);
-  background: $red;
+
+}
+
+h1 {
+  color: red;
 }
