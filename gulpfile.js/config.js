@@ -2,6 +2,7 @@ var publicDirectory = "./public";
 var publicAssets = publicDirectory + "/assets";
 var sourceDirectory = "./app";
 var sourceAssets = sourceDirectory + "/assets";
+var sassSourceDirectory = sourceAssets + '/styles/**/*.{sass,scss}';
 
 module.exports = {
   publicDirectory: publicDirectory,
@@ -22,7 +23,8 @@ module.exports = {
   },
 
   sass: {
-    src: sourceAssets + "/styles/**/*.{sass,scss}",
+    watch: sassSourceDirectory,
+    src: sassSourceDirectory,
     dest: publicAssets + "/styles",
     settings: {}
   }
