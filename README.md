@@ -6,7 +6,7 @@ For the scss linter you need ruby installed, and the install the scss-lint gem
 with `gem install scss-lint`
 
 ## To run it ##
-  1- Clone the repo
-  2- Change the remote or delete the .git folder.
-  3- Run `npm install`
-  4- Run `gulp watch` to start the schawarmagic,
+  1- Clone the repo.  
+  2- Change the remote or delete the .git folder.  
+  3- Run `npm install`  
+  4- Run `gulp watch` to start the schawarmagic.  
