@@ -27,6 +27,10 @@ module.exports = {
     watch: sassSourceDirectory,
     src: sassSourceDirectory,
     dest: publicAssets + "/styles",
-    settings: {}
+    settings: {},
+  },
+
+  sassLint: {
+    'config': "./scss-lint.yml"
   }
 };
