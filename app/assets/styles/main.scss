@@ -1,6 +1,9 @@
-@import "bourbon";
-@import "base/base";
-@import "neat";
+@import "bourbon"; // make all the bourbon library mixins available
+@import "base/base"; // imports styles for default elements
+@import "neat"; // imports mixins for the neat grid systems
 
-// Themes
-@import "themes/type-system-sans";
+@import "layout/layout"; // imports layout related rules.
+@import "modules/modules"; // imports the rules for our modules.
+@import "other/other"; // imports rules that don't fit anywhere.
+@import "themes/themes"; // imports theme rules.
+@import "shame/shame"; // imports the hacks that make baby jesus cry.
