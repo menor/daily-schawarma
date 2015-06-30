@@ -1,0 +1,25 @@
+{
+  "name": "daily_schawarma",
+  "version": "1.1.0",
+  "description": "Webpack based build system",
+  "main": "index.js",
+  "scripts": {
+    "build": "TARGET=build webpack",
+    "lint": "eslint . --ext .js --ext .jsx",
+    "start": "TARGET=dev node lib/dev_server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "css-loader": "^0.15.1",
+    "eslint-loader": "^0.14.1",
+    "html-webpack-plugin": "^1.5.2",
+    "lodash": "^3.9.3",
+    "node-libs-browser": "^0.5.2",
+    "serve": "^1.4.0",
+    "style-loader": "^0.12.3",
+    "webpack": "^1.9.12",
+    "webpack-dev-server": "^1.9.0"
+  }
+}
