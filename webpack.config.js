@@ -7,7 +7,10 @@ var TARGET = process.env.TARGET;
 var ROOT_PATH = path.resolve(__dirname);
 
 var common = {
-  entry: [path.resolve(ROOT_PATH, 'app/main')],
+  entry: [path.resolve(ROOT_PATH, 'app/main.jsx')],
+  resolve: {
+    extensions: ['', '.js', '.jsx'],
+  },
   output: {
     path: path.resolve(ROOT_PATH, 'build'),
     filename: 'bundle.js',
@@ -24,7 +27,32 @@ var common = {
 
 if(TARGET === 'build') {
   module.exports = merge(common, {
+    module: {
+      loaders: [
+        {
+        // test for js and jsx
+         test: /\.jsx?$/,
+
+        // use babel loader with stage 1 features
+        loader: 'babel?stage=1',
+
+        // operate only on our app directory
+        include: path.resolve(ROOT_PATH, 'app'),
+        },
+      ]
+    },
     plugins: [
+      new webpack.DefinePlugin({
+       'process.env': {
+          // This has effect on the react lib size
+          'NODE_ENV': JSON.stringify('production'),
+        }
+      }),
+      new webpack.optimize.UglifyJsPlugin({
+        compress: {
+          warnings: false,
+        },
+      }),
       new HtmlWebpackPlugin({
         title: 'resmio app',
      }),
