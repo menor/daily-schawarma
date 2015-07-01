@@ -1,13 +1,13 @@
-var webpack = require('webpack');
 var path = require('path');
 var HtmlWebpackPlugin = require('html-webpack-plugin');
-var merge = require('./lib/merge');
+var webpack = require('webpack');
+var merge = require('webpack-merge');
 
 var TARGET = process.env.TARGET;
 var ROOT_PATH = path.resolve(__dirname);
 
 var common = {
-  entry: [path.join(ROOT_PATH, 'app/main')],
+  entry: [path.resolve(ROOT_PATH, 'app/main')],
   output: {
     path: path.resolve(ROOT_PATH, 'build'),
     filename: 'bundle.js',
@@ -22,41 +22,27 @@ var common = {
   },
 };
 
-var mergeConfig = merge.bind(null, common);
-
 if(TARGET === 'build') {
-  module.exports = mergeConfig({
+  module.exports = merge(common, {
     plugins: [
       new HtmlWebpackPlugin({
-        title: 'Kanban app'
-      }),
+        title: 'resmio app',
+     }),
     ],
   });
 }
 
 if(TARGET === 'dev') {
   var IP = '0.0.0.0';
-  var PORT = 8080;
+  var PORT = 8090;
 
-  module.exports = mergeConfig({
+  module.exports = merge(common, {
     ip: IP,
     port: PORT,
     entry: [
       'webpack-dev-server/client?http://' + IP + ':' + PORT,
       'webpack/hot/dev-server',
     ],
-    module: {
-      preLoaders: [
-        {
-          test: /\.jsx?$/,
-          // we are using `eslint-loader` explicitly since
-          // we have ESLint module installed. This way we
-          // can be certain that it uses the right loader
-          loader: 'eslint-loader',
-          include: path.join(ROOT_PATH, 'app'),
-        },
-      ],
-    },
     output: {
       path: __dirname,
       filename: 'bundle.js',
