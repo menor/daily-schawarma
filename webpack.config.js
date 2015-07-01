@@ -71,6 +71,15 @@ if(TARGET === 'dev') {
       'webpack-dev-server/client?http://' + IP + ':' + PORT,
       'webpack/hot/dev-server',
     ],
+    module: {
+      loaders: [
+        {
+          test: /\.jsx?$/,
+          loaders: ['react-hot', 'babel?stage=1'],
+          include: path.resolve(ROOT_PATH, 'app'),
+        },
+      ],
+    },
     output: {
       path: __dirname,
       filename: 'bundle.js',
