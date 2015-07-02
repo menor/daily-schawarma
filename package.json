@@ -32,5 +32,21 @@
   },
   "dependencies": {
     "react": "^0.13.3"
+  },
+  "eslintConfig": {
+    "parser": "babel-eslint",
+    "extends": "resmio",
+    "env": {
+      "browser": true,
+      "node": true
+    },
+    "plugins": [
+      "react"
+    ],
+    "ecmaFeatures": {
+      "jsx": true,
+      "modules": true
+    }
   }
+
 }
