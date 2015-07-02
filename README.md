@@ -10,3 +10,6 @@ Traditionally we have separated our assets by technology instead of by function,
 Our pipeline also detects changes in our css and runs them through the [cssnext](http://cssnext.io/) plugin, this allows us to use future css syntax today, that gets transpiled to something that works in actual browsers, as the browsers evolve we can remove postprocessing rules from the plugin and use the native css in production.
 
 Also rules are relative to a module, and should be written inside the component folder and imported from the react component, we have the option to bundle all the css in one big file instead of having it inlined, if we see performance improvements in doing it.
+
+## Eslint ##
+To run the linting for the JS run `npm run lint --silent` the silent modifier hides the ELIFECYCLE error thrown out when the linter fails, but still shows the linting errors, you can also create an alias like `alias run ='npm run --silent'` and then simply do `run <script>`
