@@ -1,12 +1,7 @@
 # daily-schawarma
-An asset pipeline to help with front end development at Resmio. Based on the awesome [gulp-starter](https://github.com/greypants/gulp-starter) but with some sauce of our own.
+An asset pipeline to help with front end development at Resmio. It uses webpack under the hood to compile all of our assets.
 
-## Requirements ##
-For the scss linter you need ruby installed, and the install the scss-lint gem
-with `gem install scss-lint`
+## The component philosophy ##
+Traditionally we have separated our assets by technology instead of by function, but recently this trend is shifting to a more modular approach. With React we already have the HTML of a component defined inside its Javascript code using JSX templates. Webpack also can require CSS files from a Javascript file and scoped to just that file (so no need for long class names to avoid collisions). This allows us to separate our code into small self contained modules, that can be easily maintained.
 
-## To run it ##
-  1- Clone the repo.  
-  2- Change the remote or delete the .git folder.  
-  3- Run `npm install`  
-  4- Run `gulp watch` to start the schawarmagic.  
+[Here](http://simonsmith.io/using-webpack-to-build-react-components-and-their-assets/) is a good explanation about how modules work.
