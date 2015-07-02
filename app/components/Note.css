@@ -1,0 +1,7 @@
+:root {
+  --mainColor: rebeccapurple;
+}
+
+.note {
+  color: var(--mainColor);
+}
