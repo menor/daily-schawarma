@@ -72,6 +72,13 @@ if(TARGET === 'dev') {
       'webpack/hot/dev-server',
     ],
     module: {
+      preLoaders: [
+        {
+          test: /\.jsx?$/,
+          loader: 'eslint-loader',
+          include: path.resolve(ROOT_PATH, 'app'),
+        },
+      ],
       loaders: [
         {
           test: /\.jsx?$/,
