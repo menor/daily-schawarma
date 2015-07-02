@@ -1,6 +1,6 @@
 {
   "parser": "babel-eslint",
-  "config": "resmio",
+  "extends": "resmio",
   "env": {
     "browser": true,
     "node": true
