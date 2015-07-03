@@ -6,6 +6,12 @@ Traditionally we have separated our assets by technology instead of by function,
 
 [Here](http://simonsmith.io/using-webpack-to-build-react-components-and-their-assets/) is a good explanation about how modules work.
 
+## React ##
+React strength lies in encapsulating UI elements into independent modules, that can be rendered both in the browser or in the server, this allows us to keep all the pieces of code related to a component together. [Here](http://www.jackcallister.com/2015/01/05/the-react-quick-start-guide.html) is an amazing 5 minutes guide to React, that gets you up to speed.
+
+## Flux ##
+Flux is an architectural pattern for user interfaces, that works really well with React. [Here](http://www.jackcallister.com/2015/02/26/the-flux-quick-start-guide.html) is another amazing guide also written by Jack Callister, that explains it clearly.
+
 ## How to run ##
 First of all you need to run `npm install` from the root direcory so npm will install all of the dependencies under the `node_modules` folder. You need to do that everytime daily schawarma includes a new package, as a rule:
 ```
@@ -28,5 +34,6 @@ Also rules are relative to a module, and should be written inside the component 
 To run the linting for the JS run `npm run lint --silent` the silent modifier hides the ELIFECYCLE error thrown out when the linter fails, but still shows the linting errors, you can also create an alias like `alias run ='npm run --silent'` and then simply do `run <script>`
 
 ## Todo ##
--[]Source Maps support
--[]Documentation for flow
+- [ ] Source Maps support
+- [ ] Documentation for flow
+- [ ] Tests
